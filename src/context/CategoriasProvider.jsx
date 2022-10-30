@@ -4,7 +4,7 @@ import axios from 'axios'
 const CategoriasContext = createContext()
 
 const CategoriasProvider = ({ children }) => {
-  const [categoria, setCategorias] = useState([])
+  const [categorias, setCategorias] = useState([])
 
   const obtenerCategorias = async () => {
     try {
@@ -23,7 +23,7 @@ const CategoriasProvider = ({ children }) => {
   }, [])
 
   return (
-    <CategoriasContext.Provider value={{ categoria }}>
+    <CategoriasContext.Provider value={{ categorias }}>
       {children}
     </CategoriasContext.Provider>
   )
